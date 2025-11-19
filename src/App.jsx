@@ -9,33 +9,51 @@ function App() {
     <OldPaperLayout>
       <NewspaperHeader />
 
-      {/* Hero kicker */}
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="md:col-span-2">
-          <h2 className="font-serif text-3xl text-black">Front Page: Legends Confirm Movement</h2>
-          <p className="mt-2 text-gray-900 leading-7">
-            Reports confirm that after a dozen trips around the sun and exactly thrice that many in the
-            group chat, an expedition has been sanctioned. Our correspondents bring tongue-in-cheek coverage
-            from the war rooms, the crying rooms, and the airport that must not be named (Hyderabad). All
-            developments printed with maximum sarcasm and minimum responsibility.
+      {/* Banner rule */}
+      <div className="border-t-8 border-black mb-6" />
+
+      {/* Lead story + sidebar like a broadsheet */}
+      <div className="grid lg:grid-cols-12 gap-6">
+        <article className="lg:col-span-8">
+          <p className="uppercase tracking-[0.25em] text-xs text-gray-800">Lead — Group Affairs</p>
+          <h2 className="mt-1 text-4xl lg:text-5xl leading-tight font-serif" style={{ fontFamily: 'Georgia, Times New Roman, Times, serif' }}>
+            Sanction At Last; Council of Four Fixes Passage To Abu Dhabi
+          </h2>
+          <p className="mt-3 text-gray-900 leading-8 text-[17px]">
+            After a dozen winters of wavering, the celebrated company of bachelors resolved, by mixed acclamation
+            and sigh, to undertake a passage to Abu Dhabi. Telegrams indicate Hyderabad factions remain displeased;
+            divine weather clerks, however, promise a temperate 25°C.
           </p>
-        </div>
-        <div className="bg-gray-50 border border-black p-4">
-          <h3 className="font-serif text-xl text-black">Weather by Divine Department</h3>
-          <p className="text-gray-900 leading-7">
-            The gods, after reviewing the itinerary, have promised Abu Dhabi will sit politely at 25°C.
-            In return, they request fewer last-minute plan changes and at least one decent sunscreen.
+          <p className="mt-3 text-gray-900 leading-8 text-[17px]">
+            Singapore and Vietnam were courteously retired from contention. MKV, being yet unacquainted with the
+            act of booking, delays the issuance of his ticket; Auro, having shed noble tears, secures leave before
+            pre‑honeymoon. Further arrangements lie in committee.
           </p>
-        </div>
+        </article>
+
+        <aside className="lg:col-span-4 bg-[#fffdf7] border border-black p-4 shadow-[inset_0_0_0_1px_#000]">
+          <h3 className="text-2xl font-serif" style={{ fontFamily: 'Georgia, Times New Roman, Times, serif' }}>Meteorological Notes</h3>
+          <ul className="mt-2 text-sm leading-6 list-[square] pl-5">
+            <li>Abu Dhabi: Fine; 25°C decreed by gods.</li>
+            <li>Hyderabad: Overcast with objections.</li>
+            <li>Travel Sunscreens: Scarce but recommended.</li>
+          </ul>
+        </aside>
       </div>
 
+      {/* Thin rules like newspapers */}
+      <div className="my-6 border-t border-black/60" />
+
       <HistoricDeal />
+
+      <div className="my-6 border-t border-black/60" />
+
       <ProfilesSection />
 
-      {/* Footer blurb */}
-      <footer className="mt-10 pt-6 border-t-2 border-black">
-        <p className="text-center text-xs text-gray-700">
-          Printing errors guaranteed. Limits on bachelors pending high-level committee decision. Subscribe for more chaos.
+      {/* Footer like tiny agate type */}
+      <footer className="mt-10 pt-4 border-t-2 border-black">
+        <p className="text-center text-[11px] text-gray-800">
+          Notices & Miscellany: Printing errors assured. The question of limits on bachelors remains before the Board.
         </p>
       </footer>
     </OldPaperLayout>
